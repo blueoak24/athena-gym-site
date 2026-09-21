@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+Sitemap: https://athena-gym.netlify.app/sitemap.xml
