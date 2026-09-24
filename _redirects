@@ -1,0 +1,7 @@
+# Fichiers internes (non publics) : renvoient une erreur 404 en ligne.
+# Pas de page 404.html dans le projet pour l'instant : Netlify affiche alors sa page 404 par défaut.
+# robots.txt et sitemap.xml restent accessibles.
+/README.md          /404.html  404!
+/MISE-EN-LIGNE.md   /404.html  404!
+/_headers           /404.html  404!
+/_redirects         /404.html  404!

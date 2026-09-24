@@ -104,7 +104,6 @@ Netlify fournit automatiquement un certificat SSL gratuit via Let's Encrypt. Rie
 ### 6. Mises à Jour Textes
 
 Vérifier et mettre à jour si nécessaire :
-- Email : contact@athena-martial-gym.fr (dans contact.html + legal.html)
 - Adresse : 6 impasse Le Clère, 19100 Brive-la-Gaillarde
 - Téléphone : 06 18 95 86 57
 - Horaires : Mardi-vendredi 18h-21h (loisirs 18h-19h30, compétition 19h30-21h)
