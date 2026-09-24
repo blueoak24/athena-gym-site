@@ -1,7 +1,21 @@
 /* ===== ATHENA MARTIAL GYM - MAIN CSS ===== */
 
-/* === IMPORTS === */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
+/* === POLICES (hébergées en local) === */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/bebas-neue-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/roboto-variable.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* === ROOT / VARIABLES === */
 :root {

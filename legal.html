@@ -14,6 +14,7 @@
   <title>Mentions Légales - Athéna Gym</title>
   <meta name="description" content="Mentions légales et conditions d'utilisation d'Athéna Gym.">
 
+  <link rel="preload" href="/fonts/bebas-neue-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="assets/logo.jpg">
   <script type="application/ld+json">
@@ -55,17 +56,17 @@
   <!-- ===== HEADER ===== -->
   <header>
     <a href="index.html" class="navbar-brand">
-      <img src="assets/logo.jpg" alt="Logo Athéna Gym">
+      <img src="assets/logo-96.webp" alt="Logo Athéna Gym" width="44" height="44">
       <span>ATHÉNA GYM</span>
     </a>
     
-    <button class="menu-toggle" id="menu-toggle">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <nav>
+    <nav id="main-nav">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="contact.html" class="btn-primary">Contacte-nous</a></li>
@@ -150,6 +151,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

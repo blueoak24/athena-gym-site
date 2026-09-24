@@ -18,6 +18,9 @@
   <meta property="og:type" content="website">
   
   <!-- CSS -->
+  <link rel="preload" as="image" href="assets/hero-cage-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero-cage-desktop.webp" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" href="/fonts/bebas-neue-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   
   <!-- Favicon -->
@@ -61,17 +64,17 @@
   <!-- ===== HEADER ===== -->
   <header>
     <a href="index.html" class="navbar-brand">
-      <img src="assets/logo.jpg" alt="Logo Athéna Gym">
+      <img src="assets/logo-96.webp" alt="Logo Athéna Gym" width="44" height="44">
       <span>ATHÉNA GYM</span>
     </a>
     
-    <button class="menu-toggle" id="menu-toggle">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
       <span></span>
       <span></span>
       <span></span>
     </button>
     
-    <nav>
+    <nav id="main-nav">
       <ul>
         <li><a href="#disciplines">Disciplines</a></li>
         <li><a href="about.html">À Propos</a></li>
@@ -84,7 +87,10 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
-    <img src="assets/hero-cage.webp" alt="Cage de combat Athéna" class="hero-bg">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/hero-cage-mobile.webp" width="600" height="800">
+      <img src="assets/hero-cage-desktop.webp" alt="Cage de combat Athéna" class="hero-bg" width="1360" height="1020" fetchpriority="high" decoding="async">
+    </picture>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="hero-tag">Arts martiaux mixtes — Brive-la-Gaillarde</span>
@@ -249,8 +255,8 @@
       </div>
       
       <div class="gallery">
-        <img src="assets/tapis.webp" alt="Tapis de lutte et sacs de frappe">
-        <img src="assets/salle.webp" alt="Vue générale de la salle">
+        <img src="assets/tapis.webp" srcset="assets/tapis-800.webp 800w, assets/tapis.webp 1360w" sizes="(max-width: 768px) 100vw, 50vw" alt="Tapis de lutte et sacs de frappe" width="1360" height="524" loading="lazy" decoding="async">
+        <img src="assets/salle.webp" alt="Vue générale de la salle" width="680" height="1020" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -368,6 +374,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

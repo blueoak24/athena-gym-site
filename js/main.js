@@ -11,10 +11,16 @@ function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.querySelector('nav');
   
+  function setMenuAria(isOpen) {
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+
   if (menuToggle) {
     menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+      const isOpen = navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active', isOpen);
+      setMenuAria(isOpen);
     });
     
     // Close menu on link click
@@ -23,6 +29,7 @@ function initMobileMenu() {
       link.addEventListener('click', function() {
         navMenu.classList.remove('active');
         menuToggle.classList.remove('active');
+        setMenuAria(false);
       });
     });
   }
