@@ -23,11 +23,11 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 
 - [ ] Acheter le domaine (ou récupérer celui du client) et le brancher sur Netlify (Domain management), HTTPS compris.
 - [ ] Rediriger `athena-gym.netlify.app` vers le domaine définitif (Netlify le fait automatiquement une fois le domaine principal défini).
-- [ ] **Canonical** : ajouter une balise `<link rel="canonical" href="https://DOMAINE/…">` dans chaque page, à la place du commentaire laissé dans `index.html`, et l'ajouter aussi dans les autres pages (sauf `thank-you.html`, qui reste en noindex).
-- [ ] **og:url** et **og:image** : remplacer `https://athena-gym.netlify.app` par le domaine définitif dans les 7 pages.
+- [ ] **Canonical** : ajouter une balise `<link rel="canonical" href="https://DOMAINE/…">` dans chaque page, à la place du commentaire laissé dans `index.html`, et l'ajouter aussi dans les autres pages (sauf `thank-you.html` et `404.html`, qui restent en noindex).
+  - Utiliser le **format d'adresse sans `.html`** retenu pour tout le site : `https://DOMAINE/` pour l'accueil, puis `/about`, `/team`, `/contact`, `/legal`, `/privacy`.
+- [ ] **og:url**, **og:image** et **twitter:image** : remplacer `https://athena-gym.netlify.app` par le domaine définitif dans les 7 pages.
 - [ ] **JSON-LD** (6 pages) : mettre à jour `"url"` et `"image"` avec le domaine définitif.
-- [ ] **`sitemap.xml`** : mettre à jour toutes les `<loc>`.
-  - Choisir un seul format d'URL et l'utiliser partout. Aujourd'hui, le sitemap utilise `/about.html` alors que og:url utilise `/about`.
+- [ ] **`sitemap.xml`** : mettre à jour toutes les `<loc>` (en gardant le format sans `.html`).
 - [ ] **`robots.txt`** : mettre à jour la ligne `Sitemap:` avec le domaine définitif.
 
 ## 3. Informations légales au nom du client
@@ -40,7 +40,7 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 ## 4. Formulaire de contact
 
 - [ ] Le formulaire envoie actuellement vers Formspree (`https://formspree.io/f/mwlpkywj`, dans `contact.html` **et** `js/main.js`). Créer un formulaire Formspree relié à l'e-mail du client (ou transférer celui-ci sur son compte), puis remplacer l'identifiant aux deux endroits.
-- [ ] Envoyer un message de test et vérifier la réception et la redirection vers `thank-you.html`.
+- [ ] Envoyer un message de test et vérifier la réception et la redirection vers `/thank-you`.
 - [ ] Vérifier que les options du menu déroulant (cours proposés) sont toujours à jour.
 
 ## 5. Adresse e-mail professionnelle
@@ -55,7 +55,7 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 - [ ] Mettre à jour le `README.md`, qui est en partie obsolète (il mentionne `logo.png`, des images en `.jpg`, un identifiant Formspree `YOUR_FORM_ID`, un sitemap « à créer »…).
 - [ ] Mettre à jour le commentaire d'en-tête de `js/main.js` et `css/main.css` (« ATHENA MARTIAL GYM »).
 - [ ] Garder `_redirects` pour que les fichiers internes (`README.md`, `MISE-EN-LIGNE.md`…) restent inaccessibles en ligne.
-- [ ] Optionnel : créer une page `404.html` aux couleurs du site (Netlify l'utilisera automatiquement, y compris pour les règles de `_redirects`).
+- [ ] `404.html` : retirer aussi ses blocs `MAQUETTE` (noindex et bandeau), mais **garder** sa balise `<meta name="robots" content="noindex">`.
 
 ## 7. Contenus à faire valider par le client
 
@@ -74,7 +74,7 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 - [ ] Google Business Profile : ajouter le lien vers le site et vérifier que les horaires sont les mêmes (18h–21h).
 - [ ] Bing Webmaster Tools (optionnel).
 - [ ] Si Google Analytics (ou un autre outil de mesure) est ajouté : prévoir un bandeau de consentement aux cookies (RGPD) et le mentionner dans la politique de confidentialité.
-- [ ] Image de partage : `og:image` utilise le logo sur plusieurs pages, alors que `twitter:card` est en `summary_large_image`. Prévoir une image de partage au format 1200×630.
+- [ ] Image de partage : `og:image` et `twitter:image` utilisent `assets/og-athena.jpg` (1200×630). Mettre à jour l'URL avec le domaine définitif (voir partie 2).
 
 ## 9. Vérifications finales
 

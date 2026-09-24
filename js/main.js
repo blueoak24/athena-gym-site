@@ -76,7 +76,7 @@ function initFormSubmit() {
       });
       
       if (response.ok) {
-        window.location.href = 'thank-you.html';
+        window.location.href = '/thank-you';
       } else {
         showNotification('Erreur lors de l\'envoi. Réessaye ou contacte directement.', 'error');
       }
