@@ -698,3 +698,34 @@ label {
     justify-content: center;
   }
 }
+
+/* MAQUETTE-START */
+/* === BANDEAU MAQUETTE (à retirer quand le client valide le site) === */
+.maquette-banner {
+  background: #242424;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 6px 16px;
+  border-bottom: 2px solid var(--color-red);
+}
+
+/* Mention sous le formulaire de contact */
+.maquette-form-note {
+  margin-top: 24px;
+  color: #9A9A9A;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Menu burger mobile : positionné sous le header (et non plus à 70px du haut
+   de l'écran), pour qu'il reste bien placé même quand le bandeau est visible */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 100%;
+  }
+}
+/* MAQUETTE-END */
