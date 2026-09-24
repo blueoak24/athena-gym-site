@@ -251,6 +251,7 @@ nav a:hover {
 
 .btn-primary:hover {
   background: var(--color-red);
+  color: var(--color-white);
   transform: translateY(-2px);
 }
 
