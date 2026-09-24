@@ -1,6 +1,6 @@
-# Athena Martial Gym — Site Vitrine Complet
+# Athéna Gym — Site Vitrine Complet
 
-Ceci est le site vitrine complet d'Athena Martial Gym, un club MMA & Jeet Kune Do à Brive-la-Gaillarde.
+Ceci est le site vitrine complet d'Athéna Gym, un club d'arts martiaux mixtes (MMA) à Brive-la-Gaillarde.
 
 ## 📁 Structure du Projet
 
@@ -88,10 +88,10 @@ Remplacer `G-XXXXXXXXXX` par ton ID Google Analytics (à créer sur google.com/a
 ### 4. Google Business Profile
 
 Créer une fiche Google Business Profile pour Athena :
-- Nom : Athena Martial Gym
+- Nom : Athéna Gym
 - Adresse : 6 impasse Le Clère, 19100 Brive-la-Gaillarde
 - Catégorie : Arts martiaux / Salle de sport
-- Horaires : Mardi-vendredi 17h30-21h45
+- Horaires : Mardi-vendredi 18h-21h (loisirs 18h-19h30, compétition 19h30-21h)
 - Photos : Ajouter photos de la salle
 - Avis : Importer les avis Google existants
 
@@ -107,9 +107,9 @@ Vérifier et mettre à jour si nécessaire :
 - Email : contact@athena-martial-gym.fr (dans contact.html + legal.html)
 - Adresse : 6 impasse Le Clère, 19100 Brive-la-Gaillarde
 - Téléphone : 06 18 95 86 57
-- Horaires : Mardi-vendredi 17h30-21h45
+- Horaires : Mardi-vendredi 18h-21h (loisirs 18h-19h30, compétition 19h30-21h)
 - Instagram : @athena_martial_gym
-- Facebook : Athena Martial Gym
+- Facebook : Athéna Gym
 
 ## 🌐 Déploiement sur Netlify
 
