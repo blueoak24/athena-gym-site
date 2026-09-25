@@ -8,8 +8,8 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 
 ## 1. Retirer le mode maquette
 
-- [ ] **Noindex** : supprimer le bloc `MAQUETTE` qui contient `<meta name="robots" content="noindex, nofollow">` dans les 7 pages HTML.
-  - ⚠️ Sur `thank-you.html`, **garder** l'ancienne balise `<meta name="robots" content="noindex">`, située hors du bloc : la page merci ne doit jamais être indexée.
+- [ ] **Noindex** : supprimer le bloc `MAQUETTE` qui contient `<meta name="robots" content="noindex, nofollow">` dans les 6 pages concernées (`index`, `about`, `team`, `contact`, `legal`, `privacy`).
+  - ⚠️ Sur `thank-you.html` et `404.html`, la balise `<meta name="robots" content="noindex, nofollow">` est **hors bloc MAQUETTE et doit rester** : ces pages ne doivent jamais être indexées.
 - [ ] **Bandeau** « Maquette de démonstration » : supprimer le bloc `MAQUETTE` en haut du `<body>` dans les 7 pages.
 - [ ] **CSS** : supprimer le bloc `/* MAQUETTE-START */ … /* MAQUETTE-END */` à la fin de `css/main.css`.
   - Ce bloc contient aussi le positionnement du menu burger mobile (`nav { position: absolute; top: 100%; }`). Ce réglage fonctionne aussi sans le bandeau : il est conseillé de **le garder** en le sortant du bloc, puis de retester le burger sur mobile.
@@ -55,7 +55,7 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 - [ ] Mettre à jour le `README.md`, qui est en partie obsolète (il mentionne `logo.png`, des images en `.jpg`, un identifiant Formspree `YOUR_FORM_ID`, un sitemap « à créer »…).
 - [ ] Mettre à jour le commentaire d'en-tête de `js/main.js` et `css/main.css` (« ATHENA MARTIAL GYM »).
 - [ ] Garder `_redirects` pour que les fichiers internes (`README.md`, `MISE-EN-LIGNE.md`…) restent inaccessibles en ligne.
-- [ ] `404.html` : retirer aussi ses blocs `MAQUETTE` (noindex et bandeau), mais **garder** sa balise `<meta name="robots" content="noindex">`.
+- [ ] `404.html` : retirer aussi son bloc `MAQUETTE` (bandeau), mais **garder** sa balise `<meta name="robots" content="noindex, nofollow">`.
 
 ## 7. Contenus à faire valider par le client
 
@@ -73,6 +73,7 @@ Astuce : pour retrouver tous les blocs de la maquette, cherche `MAQUETTE-START` 
 - [ ] Google Search Console : ajouter le domaine, soumettre le sitemap, demander l'indexation de l'accueil.
 - [ ] Google Business Profile : ajouter le lien vers le site et vérifier que les horaires sont les mêmes (18h–21h).
 - [ ] Bing Webmaster Tools (optionnel).
+- [ ] Si un service externe est ajouté plus tard (Google Analytics, Google Maps, une vidéo intégrée, un captcha...), penser à l'autoriser dans la Content-Security-Policy du fichier _headers, sinon il sera bloqué silencieusement.
 - [ ] Si Google Analytics (ou un autre outil de mesure) est ajouté : prévoir un bandeau de consentement aux cookies (RGPD) et le mentionner dans la politique de confidentialité.
 - [ ] Image de partage : `og:image` et `twitter:image` utilisent `assets/og-athena.jpg` (1200×630). Mettre à jour l'URL avec le domaine définitif (voir partie 2).
 
