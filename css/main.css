@@ -967,6 +967,10 @@ a.text-red-link-underline {
   section {
     padding: var(--spacing-2xl) var(--spacing-md);
   }
+
+  .container {
+    padding: 0;
+  }
   
   .grid-2,
   .grid-3 {
