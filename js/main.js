@@ -141,3 +141,21 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+/* === FAQ ZIGZAG === */
+/* Chaque question ouvre/ferme uniquement sa propre réponse. */
+function initFaq() {
+  const faqList = document.querySelector('.faq-list');
+  if (!faqList) return;
+
+  faqList.classList.add('is-enhanced');
+
+  faqList.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function() {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initFaq);
