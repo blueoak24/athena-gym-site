@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Site non public (aperçu privé) : jamais indexé.
